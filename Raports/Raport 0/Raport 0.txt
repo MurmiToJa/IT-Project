@@ -41,7 +41,33 @@ Group: 5TI Section: x
     
     \newpage
     \section{Introduction}
-We will complete this in the future.
+We are developing a business website for \textbf{FinTax}, a financial and accounting company based in Poland. Here's an overview of the planned features and functionalities:
+\begin{itemize}
+    \item \textbf{Navigation Tabs:} \par
+    Our website will include several essential tabs for easy navigation, such as:
+Home,
+Services,
+About Us,
+Blog,
+Contact,
+    \item \textbf{Login Capability:}\par
+We will implement a user-friendly login system to provide clients with personalized access to their accounts and financial data.
+\item \textbf{Responsiveness:} \par
+The website will be fully responsive, ensuring an optimal user experience across various devices, including desktop computers, tablets, and mobile phones.
+
+\item \textbf{Newsletter Subscription:} \par
+
+Users will have the option to subscribe to our newsletter to receive updates on financial news, tax changes, and accounting tips.
+
+\item \textbf{Cookie Management:} \par
+We will incorporate a cookie notification and management system to ensure compliance with data protection regulations. Users will have the choice to accept or decline cookies.
+
+\item \textbf{Contact Reservation:} \par
+To facilitate easy communication, our website will feature a contact reservation system. This will allow clients to schedule appointments or consultations with our financial experts at their convenience
+
+\end{itemize}
+
+We look forward to delivering a user-friendly and informative website to assist FinTax in its mission to provide top-notch financial and accounting services in Poland.
     
     \section{Aim and scope of the project}
 The main goal of this project, as well as the entire Internet Technologies course, will be to become familiar with the construction, structure, and operation of the modern Internet. We will acquire this knowledge by creating a website.
@@ -54,16 +80,17 @@ Among the main requirements we will set will be the statement that the website m
 As per the requirements, during the first class, we presented a schedule outlining our tasks and objectives for the upcoming weeks. However, as we progressed with our work, we realized that our initial schedule was inadequate, and the terms mentioned were overly broad. Here is the original version of the schedule:
 
 \begin{enumerate}
-    \item \textbf{24.10} - Designing the website mockup, its functionality, and the graphic
-elements.
-    \item \textbf{7.11} - HTML - Creating the page structure part 1.
-    \item \textbf{14.11} -  HTML - Further development of the page structure part 2.
-    \item \textbf{21.11} - CSS - Defining the page's interface.
-    \item \textbf{28.11} - CSS and Grid - Fine-tuning the page layout.
-    \item \textbf{05.12} - JavaScript - Creating basic scripts.
-    \item \textbf{12.12} - JavaScript - Developing scripts for website interactions.
-    \item \textbf{19.12} - PHP - Implementing scripts connecting to the database, enabling login, and adding Cookies and Newsletter.
-    \item \textbf{02.01} - Implementing databases to allow user login.
+    \item \textbf{19.10} - Designing the website mockup, its functionality, the graphic
+elements, creating the concept of website responsiveness.
+    \item \textbf{26.10} - Hosting and Domain - making analysis SWOT. 
+    \item \textbf{02.11} -  HTML - Creating the page structure part.
+    \item \textbf{09.11} - CSS - Defining the page's interface.
+    \item \textbf{16.11} - CSS and Grid - Fine-tuning the page layout - creating website responsiveness.
+    \item \textbf{23.11} - JavaScript - Creating basic scripts.
+    \item \textbf{30.11} - JavaScript - Developing scripts for website interactions.
+    \item \textbf{07.12} - PHP - Implementing scripts connecting to the database, enabling login, and adding Cookies and Newsletter.
+    \item \textbf{14.12} - Implementing databases to allow user login.
+    \item \textbf{21.12} - Final Report.
 \end{enumerate}
 
     \newpage
