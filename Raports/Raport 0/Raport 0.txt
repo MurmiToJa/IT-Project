@@ -1,9 +1,10 @@
 \documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\usepackage{graphicx} 
 \usepackage{enumitem}
 \usepackage{geometry}
 \usepackage{tocloft}
 \usepackage{fancyhdr}
+\usepackage{hyperref}
 
 \renewcommand{\contentsname}{Table Of Content}
 \renewcommand{\cftsecfont}{}
@@ -21,14 +22,14 @@
 
 \title{\textbf{SILESIAN UNIVERSITY OF TECHNOLOGY FACULTY OF AUTOMATIC CONTROL, ELECTRONICS AND COMPUTER SCIENCE}}
 \author{Kacper Szymaniak Bartłomiej Murmyłowski \\
-Group: 5TI Section: x
+Group: 5TI Section: 533
 }
 
 \date{12 October 2023}
 
 
 \begin{document}
-
+\thispagestyle{empty}
 \newgeometry{left=5cm, right=5cm, top=3cm, bottom=3cm}   
     \maketitle
  \restoregeometry
@@ -45,11 +46,8 @@ We are developing a business website for \textbf{FinTax}, a financial and accoun
 \begin{itemize}
     \item \textbf{Navigation Tabs:} \par
     Our website will include several essential tabs for easy navigation, such as:
-Home,
-Services,
-About Us,
-Blog,
-Contact,
+Home, Services, About Us, Contact,
+
     \item \textbf{Login Capability:}\par
 We will implement a user-friendly login system to provide clients with personalized access to their accounts and financial data.
 \item \textbf{Responsiveness:} \par
@@ -85,7 +83,7 @@ elements, creating the concept of website responsiveness.
     \item \textbf{26.10} - Hosting and Domain - making analysis SWOT. 
     \item \textbf{02.11} -  HTML - Creating the page structure part.
     \item \textbf{09.11} - CSS - Defining the page's interface.
-    \item \textbf{16.11} - CSS and Grid - Fine-tuning the page layout - creating website responsiveness.
+    \item \textbf{16.11} - CSS and Grid \textbackslash Flexbox \textbackslash Bootstrap - Fine-tuning the page layout - creating website responsiveness.
     \item \textbf{23.11} - JavaScript - Creating basic scripts.
     \item \textbf{30.11} - JavaScript - Developing scripts for website interactions.
     \item \textbf{07.12} - PHP - Implementing scripts connecting to the database, enabling login, and adding Cookies and Newsletter.
@@ -109,12 +107,15 @@ One interesting aspect of our endeavor is that one of our team members is in the
 In our IT project, we will be utilizing a variety of tools and platforms to ensure a comprehensive and efficient workflow.
 \begin{itemize}
     \item \textbf{Graphic Design:} \par
-    We'll rely on tools like Photoshop and Canva for crafting the visual elements of our website. These software applications enable us to create and manipulate images, logos, and other graphical assets that will enhance the visual appeal of our project.
+    We'll rely on tools like Photoshop, Canva and Figma for crafting the visual elements of our website. These software applications enable us to create and manipulate images, logos, and other graphical assets that will enhance the visual appeal of our project.
     \item \textbf{Coding Environment:}\par
 For writing and editing code, we'll make use of Visual Studio Code. This highly versatile code editor offers a wide range of extensions and features that facilitate coding in HTML, CSS, JavaScript, and more. It will be our primary workspace for coding and debugging.
 \item \textbf{Version Control:} \par
 
-GitHub will serve as our collaboration and version control platform. It allows us to efficiently share, track changes, and manage project files. The use of Git and GitHub ensures a smooth and organized development process, enhancing team collaboration.
+GitHub will serve as our collaboration and version control platform. It allows us to efficiently share, track changes, and manage project files. The use of Git and GitHub ensures a smooth and organized development process, enhancing team collaboration.\par
+Link to our GitHub repository: 
+https://github.com/MurmiToJa/IT-Project
+
 
 \item \textbf{Document Preparation:} \par
 
