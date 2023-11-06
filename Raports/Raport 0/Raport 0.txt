@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+
+\renewcommand{\contentsname}{Table Of Content}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsubsecfont}{}
+\renewcommand{\cftsubsubsecfont}{}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[C]{IT Project} 
+\fancyhead[L]{}
+\fancyhead[R]{}
+\fancyfoot[C]{\thepage} 
+
+
+
+\title{\textbf{SILESIAN UNIVERSITY OF TECHNOLOGY FACULTY OF AUTOMATIC CONTROL, ELECTRONICS AND COMPUTER SCIENCE}}
+\author{Kacper Szymaniak Bartłomiej Murmyłowski \\
+Group: 5TI Section: x
+}
+
+\date{12 October 2023}
+
+
+\begin{document}
+
+\newgeometry{left=5cm, right=5cm, top=3cm, bottom=3cm}   
+    \maketitle
+ \restoregeometry
+    \newpage
+\newgeometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}   
+\fontsize{14}{16}\selectfont
+
+\tableofcontents
+
+    
+    \newpage
+    \section{Introduction}
+We will complete this in the future.
+    
+    \section{Aim and scope of the project}
+The main goal of this project, as well as the entire Internet Technologies course, will be to become familiar with the construction, structure, and operation of the modern Internet. We will acquire this knowledge by creating a website.
+
+An important goal of this course will also be learning to work in groups - this specific type of work is used today in almost every serious company in the technology industry. The cooperation will allow us to understand how important efficient communication in a team is and that there will always be disagreements and a compromise must be worked out. In addition, we will be training skills related to punctuality and keeping deadlines.
+
+Among the main requirements we will set will be the statement that the website must be transparent and easy to use. We will want to find a golden mean between aesthetics and functionality.
+    \newpage
+    \section{Schedule}
+As per the requirements, during the first class, we presented a schedule outlining our tasks and objectives for the upcoming weeks. However, as we progressed with our work, we realized that our initial schedule was inadequate, and the terms mentioned were overly broad. Here is the original version of the schedule:
+
+\begin{enumerate}
+    \item \textbf{24.10} - Designing the website mockup, its functionality, and the graphic
+elements.
+    \item \textbf{7.11} - HTML - Creating the page structure part 1.
+    \item \textbf{14.11} -  HTML - Further development of the page structure part 2.
+    \item \textbf{21.11} - CSS - Defining the page's interface.
+    \item \textbf{28.11} - CSS and Grid - Fine-tuning the page layout.
+    \item \textbf{05.12} - JavaScript - Creating basic scripts.
+    \item \textbf{12.12} - JavaScript - Developing scripts for website interactions.
+    \item \textbf{19.12} - PHP - Implementing scripts connecting to the database, enabling login, and adding Cookies and Newsletter.
+    \item \textbf{02.01} - Implementing databases to allow user login.
+\end{enumerate}
+
+    \newpage
+    \section{Technologies}
+In our IT project, we will be delving into the realm of web development, where we'll harness the power of HTML and CSS.
+
+\textbf{HTML}, or HyperText Markup Language, serves as the backbone of web content, enabling us to structure and organize the elements of our web pages. It's essentially the language that browsers understand to render text, images, links, and more.
+
+Complementing HTML is \textbf{CSS}, which stands for Cascading Style Sheets. CSS empowers us to define the visual aspects of our web pages, including layout, fonts, colors, and the overall design. It plays a pivotal role in ensuring our website looks visually appealing and is easy to navigate.
+
+As for our approach, we're contemplating whether to employ the flexibility of CSS Grid or harness the pre-built design components of Bootstrap. This decision will be informed by our project's specific requirements and what best aligns with our design objectives.
+
+One interesting aspect of our endeavor is that one of our team members is in the process of acquiring proficiency in these technologies. This project will serve as a valuable learning experience for them, providing hands-on practice and the opportunity to develop real-world skills. It's an exciting journey of growth and exploration as we leverage these technologies to craft a dynamic and user-friendly website.
+\par
+\par
+In our IT project, we will be utilizing a variety of tools and platforms to ensure a comprehensive and efficient workflow.
+\begin{itemize}
+    \item \textbf{Graphic Design:} \par
+    We'll rely on tools like Photoshop and Canva for crafting the visual elements of our website. These software applications enable us to create and manipulate images, logos, and other graphical assets that will enhance the visual appeal of our project.
+    \item \textbf{Coding Environment:}\par
+For writing and editing code, we'll make use of Visual Studio Code. This highly versatile code editor offers a wide range of extensions and features that facilitate coding in HTML, CSS, JavaScript, and more. It will be our primary workspace for coding and debugging.
+\item \textbf{Version Control:} \par
+
+GitHub will serve as our collaboration and version control platform. It allows us to efficiently share, track changes, and manage project files. The use of Git and GitHub ensures a smooth and organized development process, enhancing team collaboration.
+
+\item \textbf{Document Preparation:} \par
+
+Additionally, for preparing reports in a structured and professional format, we will leverage the platform Overleaf. Overleaf is a  online tool for writing documents in LaTeX, a typesetting system commonly used in academia and technical documentation. It will enable us to create comprehensive and well-structured project reports.
+
+
+
+\end{itemize}
+
+ \restoregeometry   
+\end{document}
+
+
