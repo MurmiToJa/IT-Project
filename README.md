@@ -20,10 +20,10 @@ Our project's primary goal is to gain a deep understanding of modern Internet te
 **Our Work Schedule:**
 
 - [x] Week 1 - Designing the website mockup, its functionality, the graphic elements, creating the concept of website responsiveness.
-- [ ] Week 2 - Hosting and Domain - making analysis SWOT.
-- [ ] Week 3 - HTML - Creating the page structure part.
-- [ ] Week 4 - CSS - Defining the page’s interface.
-- [ ] Week 5 - CSS and Grid \Flexbox \Bootstrap - Fine-tuning the page layout -  creating website responsiveness.
+- [x] Week 2 - Hosting and Domain - making analysis SWOT.
+- [x] Week 3 - HTML - Creating the page structure part.
+- [x] Week 4 - CSS - Defining the page’s interface.
+- [x] Week 5 - CSS and Grid \Flexbox \Bootstrap - Fine-tuning the page layout -  creating website responsiveness.
 - [ ] Week 6 - JavaScript - Creating basic scripts.
 - [ ] Week 7 - JavaScript - Developing scripts for website interactions.
 - [ ] Week 8 - PHP - Implementing scripts connecting to the database, enabling login, and adding Cookies and Newsletter.
