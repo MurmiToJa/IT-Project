@@ -122,6 +122,10 @@
 /*** Navbar End ***/
 
 /*** Text Start ***/
+
+.padded{
+  padding: 3rem;
+}
 .start_text {
   background: #211F6B;
   font-size: 12px;
@@ -135,4 +139,40 @@
   font-size: 40px;
   padding: 15px;
   font-family: Newsreader;
+}
+
+
+.shadow-text {
+  text-shadow: 2px 2px #000000 !important;
+}
+
+.purple-text{
+  color: #211F6B !important;
+}
+
+.register-form {
+    padding: 25px 15px;
+    border-radius: 0px 40px 0px 40px;
+    margin: 50px 0px;
+    border: 1px solid #ddd;
+    float: left;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px #cacaca;
+    border-left: 5px solid #211F6B;
+}
+.register-form .form-group {
+    position: relative;
+}
+.register-form .hint {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+.register-form span {
+    display: block;
+    padding: 2px 15px;
+    border-radius: 4px;
+}
+.register-form input:focus + span {
+    display: block;
 }

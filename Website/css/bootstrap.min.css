@@ -45,7 +45,7 @@
 
 body {
   margin: 0;
-  font-family: "Open", sans-serif;
+  font-family: Newsreader !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
