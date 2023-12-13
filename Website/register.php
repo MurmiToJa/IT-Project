@@ -1,4 +1,4 @@
-<?php include('php/server.php') ?>
+<?php include('php/register.php') ?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -66,34 +66,34 @@
 
   <div class="container padded animated slideInLeft">
     <div class="row">
-      <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
-        <form class="register-form" action="register.php" method="post">
-          <h2 class="text-center purple-text">Rejestracja</h2>
-          <hr>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input name="email" type="email" class="form-control" placeholder="Wprowadź Email">
-            <span class="hint alert-success">Wprowadź poprawny mail</span>
-          </div>
-          <div class="form-group">
-            <label for="password">Hasło</label>
-            <input type="password" class="form-control" placeholder="Hasło">
-            <span class="hint alert-success">Hasło musi posiadać przynajmniej 8 znaków. </span>
-          </div>
-          <div class="form-group">
-            <label>Powtórz Hasło</label>
-            <input type="password" class="form-control" placeholder="Hasło">
-            <span class="hint alert-success">Wpisz ponownie to samo hasło.</span>
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input">
-            <label class="form-check-label">Zapamiętaj Mnie</label>
-          </div>
-          <hr>
-          <button type="submit" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Zarejestruj</button>
-          <p class="text-center mt-2 mb-0 float-left">Masz już konto? <a href="#" style="color: purple;">Zaloguj się</a></p>
-        </form>
-      </div>
+        <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+            <form class="register-form" action="register.php" method="post">
+                <h2 class="text-center purple-text">Rejestracja</h2>
+                <hr>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" class="form-control" placeholder="Wprowadź Email">
+                    <span class="hint alert-success">Wprowadź poprawny mail</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Hasło</label>
+                    <input name="password_1" type="password" class="form-control" placeholder="Hasło">
+                    <span class="hint alert-success">Hasło musi posiadać przynajmniej 8 znaków. </span>
+                </div>
+                <div class="form-group">
+                    <label>Powtórz Hasło</label>
+                    <input name="password_2" type="password" class="form-control" placeholder="Hasło">
+                    <span class="hint alert-success">Wpisz ponownie to samo hasło.</span>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Zapamiętaj Mnie</label>
+                </div>
+                <hr>
+                <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Zarejestruj</button>
+                <p class="text-center mt-2 mb-0 float-left">Masz już konto? <a href="#" style="color: purple;">Zaloguj się</a></p>
+            </form>
+        </div>
     </div>
   </div>
 
