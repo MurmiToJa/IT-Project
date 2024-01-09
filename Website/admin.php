@@ -1,0 +1,293 @@
+<?php include('php/admin.php') ?>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<title>FinTax</title>
+</head>
+
+<body>
+
+
+  <!-- Navbar Start -->
+  <div class="container-fluid bg-purple">
+    <div class="container">
+      <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
+        <a href="index.html" class="navbar-brand">
+          <h1 class="text-primary mb-0 display-5">Fin<span class="text-white">Tax</span></h1>
+        </a>
+        <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="fa fa-bars text-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="index.php" class="nav-item nav-link ">Home</a>
+            <a href="aboutus.php" class="nav-item nav-link">O Nas</a>
+            <a href="offer.php" class="nav-item nav-link">Oferta</a>
+            <a href="login.php" class="nav-item nav-link active">Mój Profil</a>
+            <a href="register.php" class="nav-item nav-link">Dołącz</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar Stop -->
+
+
+
+
+ <div class="container py-5">
+    <!-- For demo purpose -->
+    <header class="text-center text-white wow fadeInUp" data-wow-delay="1s">
+        <h1 class="display-4">Zapisani do newslettera:</h1>
+    </header>
+
+    <div class="row py-5">
+        <div class="col-lg-7 mx-auto">
+            <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
+                <div class="card-body p-5">
+                    <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista zapisanych:</h4>
+                    <!-- Table to display emails -->
+                    <table class="table wow fadeInUp" data-wow-delay=".6s">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">E-mail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // Wyświetlanie e-maili z bazy danych w tabeli
+                            foreach ($emails as $index => $email) {
+                                // Dodanie atrybutu data-email do komórki zawierającej maila
+                                echo '<tr>';
+                                echo '<th scope="row">' . ($index + 1) . '</th>';
+                                echo '<td data-email>' . $email['mail'] . '</td>';
+                                echo '</tr>';
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+
+                    <!-- Button to export emails -->
+                    <button class="btn btn-primary" id="exportBtn">Export</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <div class="container py-5">
+    <header class="text-center text-white wow fadeInUp" data-wow-delay="1s">
+        <h1 class="display-4">Osoby do skontaktowania:</h1>
+    </header>
+
+    <div class="row py-5">
+        <div class="col-lg-9 mx-auto">
+            <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
+                <div class="card-body p-5">
+                    <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista kontaktów:</h4>
+                    <!-- Formularz z listą osób -->
+                    <form id="contactForm" method="post" action="php/delete_meetings.php">
+                        <table class="table wow fadeInUp" data-wow-delay=".6s">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID Klienta</th>
+                                    <th scope="col">Imię</th>
+                                    <th scope="col">Nazwisko</th>
+                                    <th scope="col">Mail</th>
+                                    <th scope="col">Data spotkania</th>
+                                    <th scope="col">Checkbox</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                // Wyświetlanie osób w formularzu
+                                foreach ($firmData as $index => $firm) {
+                                    echo '<tr>';
+                                    echo '<td>' . $firm['Id_klienta'] . '</td>';
+                                    echo '<td>' . $firm['Imie'] . '</td>';
+                                    echo '<td>' . $firm['Nazwisko'] . '</td>';
+                                    echo '<td>' . $firm['Email'] . '</td>';
+                                    echo '<td>' . $firm['Godziny_spotkania'] . '</td>';
+                                    echo '<td><input type="checkbox" name="deleteMeetings[]" value="' . $firm['Id_klienta'] . '"></td>';
+                                    echo '</tr>';
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                        <!-- Button to delete selected meetings -->
+                        <button type="submit" class="btn btn-danger" id="deleteMeetingsBtn">Usuń zaznaczone spotkania</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+				<form action="php/logout.php" method="post">
+                    <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
+                </form>
+
+  <footer class="text-white text-center text-lg-start bg-purple">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
+
+          <p>
+            Tutaj Będzie NIP:
+          </p>
+
+          <p>
+            Firma wpisana do Rejestru Przedsiębiorców KRS
+            pod numerem:
+          </p>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4" style="color:White">Godziny Otwarcia Biura:</h5>
+
+          <table class="table text-center text-white">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>Poniedziałek - Piątek:</td>
+                <td>8 - 21</td>
+              </tr>
+              <tr>
+                <td>Sobota:</td>
+                <td>8 - 19</td>
+              </tr>
+              <tr>
+                <td>Niedziela:</td>
+                <td>13 - 19</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+  </footer>
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <script>
+    // Przycisk exportu
+    var exportBtn = document.getElementById("exportBtn");
+
+    // Funkcja do obsługi kliknięcia przycisku exportu
+    exportBtn.addEventListener("click", function() {
+      // Pobranie wszystkich komórek z atrybutem data-email
+      var emailCells = document.querySelectorAll("tbody td[data-email]");
+
+      // Utworzenie tablicy na maile
+      var emails = [];
+
+      // Pobranie maili z komórek i dodanie do tablicy
+      emailCells.forEach(function(cell) {
+        emails.push(cell.textContent);
+      });
+
+      // Przygotowanie danych do eksportu
+      var exportData = emails.join(", ");
+
+      // Utworzenie elementu do pobrania pliku
+      var a = document.createElement("a");
+      var blob = new Blob([exportData], {
+        type: "text/plain"
+      });
+      a.href = URL.createObjectURL(blob);
+      a.download = "emaillist.txt";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+
+  </script>
+
+  <script>
+    // Funkcja do oznaczania, że kontakt został nawiązany
+    function markContacted(index) {
+      // Możesz tutaj dodać kod do oznaczania kontaktu w bazie danych lub innym systemie
+
+      // Tutaj przykładowy kod do zmiany koloru przycisku na zielony
+      var checkBtn = document.querySelector('#contactForm button:nth-of-type(' + (index + 1) + ')');
+      checkBtn.classList.remove('btn-primary');
+      checkBtn.classList.add('btn-success');
+      checkBtn.textContent = 'Contacted';
+    }
+
+  </script>
+
+</body>
+
+</html>

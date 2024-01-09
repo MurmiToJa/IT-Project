@@ -45,13 +45,11 @@
         </button>
         <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="aboutus.html" class="nav-item nav-link">O Nas</a>
-            <a href="offer.html" class="nav-item nav-link active">Oferta</a>
-            <a href="project.html" class="nav-item nav-link">Newsletter</a>
-            <a href="profile.html" class="nav-item nav-link">Mój Profil</a>
-            <a href="register.html" class="nav-item nav-link">Dołącz</a>
-
+            <a href="index.php" class="nav-item nav-link ">Home</a>
+            <a href="aboutus.php" class="nav-item nav-link">O Nas</a>
+            <a href="offer.php" class="nav-item nav-link active">Oferta</a>
+            <a href="login.php" class="nav-item nav-link">Mój Profil</a>
+            <a href="register.php" class="nav-item nav-link">Dołącz</a>
           </div>
         </div>
       </nav>
@@ -59,89 +57,89 @@
   </div>
   <!-- Navbar Stop -->
   <div class="container bootstrap snippets bootdey">
-  <section id="services" class="current">
+    <section id="services" class="current">
       <div class="services-top">
-          <div class="container bootstrap snippets bootdey">
-              <div class="row text-center wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="col-sm-12 col-md-12 col-md-12 wow fadeInUp" data-wow-delay="0.8s">
-                      <h2>Co Oferujemy?</h2>
-                      <h2 style="font-size: 60px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Nasza Oferta</h2>
-                      <p wow fadeInUp" data-wow-delay="1s">Nasz <span class="highlight">doświadczony</span> i <span class="highlight">oddany</span> personel świadczy te usługi z uśmiechem.</p>
-                  </div>
-              </div>
-              <div class="row wow fadeInUp" data-wow-delay="1.2s">
-                  <div class="col-md-offset-1 col-sm-12 col-md-12 col-md-10">
-                      <div class="services-list">
-                          <div class="row">
-                              <div class="col-sm-6 col-md-4 col-md-4">
-                                  <div class="service-block" style="visibility: visible;">
-                                      <div class="ico fa fa-magic highlight"></div>
-                                      <div class="text-block">
-                                          <div class="name">Obsługi Doradcze</div>
-                                          <div class="info">Krótki opis here</div>
-                                          <div class="text">Bieżące doradztwo podatkowe, planowanie podatkowe, przygotowywanie deklaracji podatkowych, reprezentowanie firmy przed Urzędem Skarbowym, Izbą Skarbową, Naczelnym Sądem Administracyjnym. </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 col-md-4 col-md-4">
-                                  <div class="service-block" style="visibility: visible;">
-                                      <div class="ico fa fa-code highlight"></div>
-                                      <div class="text-block">
-                                          <div class="name">Obsługa Księgowej</div>
-                                          <div class="info">Krótki opis here</div>
-                                          <div class="text">Prowadzenie rachunkowości Państwa firmy, przygotowywanie sprawozdań dla potrzeb rachunkowości finansowej i zarządczej, przygotowywanie analiz i raportów dla zarządu i udziałowców, również wg Międzynarodowych Standardów Rachunkowości. </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 col-md-4 col-md-4">
-                                  <div class="service-block" style="visibility: visible;">
-                                    <div class="ico fa fa-code highlight"></div>
-                                      <div class="text-block">
-                                          <div class="name">Obsługi Kadrowo-płacowe</div>
-                                          <div class="info">Krótki opis here</div>
-                                          <div class="text">Prowadzenie rozliczeń z pracownikami, rozliczeń z ZUS, osobne prowadzenie płac zarządu. </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 col-md-4 col-md-4">
-                                  <div class="service-block" style="visibility: visible;">
-                                      <div class="ico fa fa-bullhorn highlight"></div>
-                                      <div class="text-block">
-                                          <div class="name">Obsługa Gospodarcza</div>
-                                          <div class="info">Krótki opis here</div>
-                                          <div class="text">Zakładanie, przekształcanie oraz wycena przedsiębiorstw. </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 col-md-4 col-md-4">
-                                  <div class="service-block" style="visibility: visible;">
-                                      <div class="ico fa fa-eye highlight"></div>
-                                      <div class="text-block">
-                                          <div class="name">Audyt Podatkowy Spółki</div>
-                                          <div class="info">Krótki opis here</div>
-                                          <div class="text">Krótki opis here </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 col-md-4 col-md-4">
-                                  <div class="service-block" style="visibility: visible;">
-                                      <div class="ico fa fa-umbrella highlight"></div>
-                                      <div class="text-block">
-                                          <div class="name">Doradztwo W Zakresie Zarządzania</div>
-                                          <div class="info">Krótki opis here</div>
-                                          <div class="text">Krótki opis here </div>
-                                      </div>
-                                  </div>
-                                  
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+        <div class="container bootstrap snippets bootdey">
+          <div class="row text-center wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-sm-12 col-md-12 col-md-12 wow fadeInUp" data-wow-delay="0.8s">
+              <h2>Co Oferujemy?</h2>
+              <h2 style="font-size: 60px;line-height: 60px;margin-bottom: 20px;font-weight: 900;">Nasza Oferta</h2>
+              <p class=" wow fadeInUp" data-wow-delay="1s">Nasz <span class="highlight">doświadczony</span> i <span class="highlight">oddany</span> personel świadczy te usługi z uśmiechem.</p>
+            </div>
           </div>
+          <div class="row wow fadeInUp" data-wow-delay="1.2s">
+            <div class="col-md-offset-1 col-sm-12 col-md-12 col-md-10">
+              <div class="services-list">
+                <div class="row">
+                  <div class="col-sm-6 col-md-4 col-md-4">
+                    <div class="service-block" style="visibility: visible;">
+                      <div class="ico fa fa-magic highlight"></div>
+                      <div class="text-block">
+                        <div class="name">Obsługi Doradcze</div>
+                        <div class="info">Krótki opis here</div>
+                        <div class="text">Bieżące doradztwo podatkowe, planowanie podatkowe, przygotowywanie deklaracji podatkowych, reprezentowanie firmy przed Urzędem Skarbowym, Izbą Skarbową, Naczelnym Sądem Administracyjnym. </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-md-4">
+                    <div class="service-block" style="visibility: visible;">
+                      <div class="ico fa fa-code highlight"></div>
+                      <div class="text-block">
+                        <div class="name">Obsługa Księgowej</div>
+                        <div class="info">Krótki opis here</div>
+                        <div class="text">Prowadzenie rachunkowości Państwa firmy, przygotowywanie sprawozdań dla potrzeb rachunkowości finansowej i zarządczej, przygotowywanie analiz i raportów dla zarządu i udziałowców, również wg Międzynarodowych Standardów Rachunkowości. </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-md-4">
+                    <div class="service-block" style="visibility: visible;">
+                      <div class="ico fa fa-code highlight"></div>
+                      <div class="text-block">
+                        <div class="name">Obsługi Kadrowo-płacowe</div>
+                        <div class="info">Krótki opis here</div>
+                        <div class="text">Prowadzenie rozliczeń z pracownikami, rozliczeń z ZUS, osobne prowadzenie płac zarządu. </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-md-4">
+                    <div class="service-block" style="visibility: visible;">
+                      <div class="ico fa fa-bullhorn highlight"></div>
+                      <div class="text-block">
+                        <div class="name">Obsługa Gospodarcza</div>
+                        <div class="info">Krótki opis here</div>
+                        <div class="text">Zakładanie, przekształcanie oraz wycena przedsiębiorstw. </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-md-4">
+                    <div class="service-block" style="visibility: visible;">
+                      <div class="ico fa fa-eye highlight"></div>
+                      <div class="text-block">
+                        <div class="name">Audyt Podatkowy Spółki</div>
+                        <div class="info">Krótki opis here</div>
+                        <div class="text">Krótki opis here </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4 col-md-4">
+                    <div class="service-block" style="visibility: visible;">
+                      <div class="ico fa fa-umbrella highlight"></div>
+                      <div class="text-block">
+                        <div class="name">Doradztwo W Zakresie Zarządzania</div>
+                        <div class="info">Krótki opis here</div>
+                        <div class="text">Krótki opis here </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  </section>
-  </div>      
+    </section>
+  </div>
 
 
 
@@ -150,6 +148,7 @@
     <div class="container p-4">
       <!--Grid row-->
       <div class="row mt-4">
+
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
@@ -211,19 +210,20 @@
       </div>
       <!--Grid row-->
     </div>
-    <!-- Grid container -->
+  </footer>
+  <!-- Grid container -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
 
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

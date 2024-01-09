@@ -1,5 +1,6 @@
-<?php include('php/login.php') ?>
+<?php include('php/user.php') ?>
 <!DOCTYPE html>
+
 <html lang="pl">
 
 <head>
@@ -27,10 +28,8 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/style_register.css" rel="stylesheet">
-</head>
 
-<title>FinTax</title>
+  <title>FinTax</title>
 </head>
 
 <body>
@@ -48,10 +47,10 @@
         </button>
         <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.php" class="nav-item nav-link ">Home</a>
+            <a href="index.php" class="nav-item nav-link active">Home</a>
             <a href="aboutus.php" class="nav-item nav-link">O Nas</a>
             <a href="offer.php" class="nav-item nav-link">Oferta</a>
-            <a href="login.php" class="nav-item nav-link active">Mój Profil</a>
+            <a href="login.php" class="nav-item nav-link">Mój Profil</a>
             <a href="register.php" class="nav-item nav-link">Dołącz</a>
           </div>
         </div>
@@ -60,33 +59,52 @@
   </div>
   <!-- Navbar Stop -->
 
-
-  <div class="container padded animated slideInLeft">
-    <div class="row">
-      <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
-        <form class="register-form" action="login.php" method="post">
-          <h2 class="text-center purple-text">Logowanie</h2>
-          <hr>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input name="email" type="email" class="form-control" placeholder="Wprowadź Email" autocomplete="off">
-          </div>
-          <div class="form-group">
-            <label for="password">Hasło</label>
-            <input name="password" type="password" class="form-control" placeholder="Hasło" autocomplete="off">
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input">
-            <label class="form-check-label">Zapamiętaj Mnie</label>
-          </div>
-          <hr>
-          <button type="submit" name="login_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Zaloguj</button>
-          <p class="text-center mt-2 mb-0 float-left">Nie masz jeszcze konta? <a href="register.php" style="color: #fdf227;">Zarejestruj się</a></p>
-        </form>
-
-      </div>
+  <!-- Form Section Start -->
+<div class="container mt-5">
+    <div class="container padded animated slideInLeft">
+        <div class="row">
+            <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+                <form class="register-form" action="user.php" method="post">
+                    <h2 class="text-center purple-text">Formularz zgłoszeniowy</h2>
+                    <hr>
+                    <div class="form-group">
+                        <label for="imie">Imię</label>
+                        <input name="imie" type="text" class="form-control" placeholder="Imię" value="<?php echo isset($imie) ? htmlspecialchars($imie) : ''; ?>">
+                        <span class="hint alert-success">Wprowadź swoje Imię</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nazwisko">Nazwisko</label>
+                        <input name="nazwisko" type="text" class="form-control" placeholder="Nazwisko" value="<?php echo isset($nazwisko) ? htmlspecialchars($nazwisko) : ''; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon">Numer telefonu</label>
+                        <input name="telefon" type="text" class="form-control" placeholder="999 xxx xxx" maxlength="9" value="<?php echo isset($telefon) ? htmlspecialchars($telefon) : ''; ?>">
+                        <span class="hint alert-success">Wpisz numer telefonu (maksymalnie 9 cyfr).</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactTime">Data spotkania</label>
+                        <input type="datetime-local" class="form-control" name="contactTime" id="contactTime" required value="<?php echo isset($godziny_spotkania) ? htmlspecialchars($godziny_spotkania) : ''; ?>">
+                    </div>
+                    <hr>
+                    <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Wprowadź</button>
+					
+                </form>
+				<!-- Przycisk do wylogowania -->
+                <form action="logout.php" method="post">
+                    <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+
+  <!-- Form Section End -->
+
+
+
+
+
+
 
 
 
@@ -158,11 +176,13 @@
       <!--Grid row-->
     </div>
   </footer>
-  <!-- Grid container -->
+
+
   <!-- Back to Top -->
   <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
   <!-- JavaScript Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/cb70904cb1.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
@@ -170,17 +190,35 @@
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Start Scritp for Form -->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+  </script>
+
+
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
 </body>
 
 </html>
-<?php
-                if (isset($_SESSION['error'])) {
-    echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>';
-    unset($_SESSION['error']); // Usunięcie komunikatu o błędzie po wyświetleniu
-}
-
-
-
-                ?>

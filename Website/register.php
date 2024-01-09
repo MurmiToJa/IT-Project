@@ -1,5 +1,10 @@
 <?php include('php/register.php') ?>
+
+
+
+
 <!DOCTYPE html>
+
 <html lang="pl">
 
 <head>
@@ -31,9 +36,11 @@
 </head>
 
 <title>FinTax</title>
+
 </head>
 
 <body>
+
 
 
   <!-- Navbar Start -->
@@ -48,13 +55,11 @@
         </button>
         <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link ">Home</a>
-            <a href="aboutus.html" class="nav-item nav-link">O Nas</a>
-            <a href="offer.html" class="nav-item nav-link">Oferta</a>
-            <a href="project.html" class="nav-item nav-link">Newsletter</a>
-            <a href="profile.html" class="nav-item nav-link">Mój Profil</a>
-            <a href="register.html" class="nav-item nav-link active">Dołącz</a>
-
+            <a href="index.php" class="nav-item nav-link">Home</a>
+            <a href="aboutus.php" class="nav-item nav-link">O Nas</a>
+            <a href="offer.php" class="nav-item nav-link">Oferta</a>
+            <a href="login.php" class="nav-item nav-link">Mój Profil</a>
+            <a href="register.php" class="nav-item nav-link active">Dołącz</a>
           </div>
         </div>
       </nav>
@@ -63,123 +68,136 @@
   <!-- Navbar Stop -->
 
 
-
   <div class="container padded animated slideInLeft">
     <div class="row">
-        <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
-            <form class="register-form" action="register.php" method="post">
-                <h2 class="text-center purple-text">Rejestracja</h2>
-                <hr>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input name="email" type="email" class="form-control" placeholder="Wprowadź Email">
-                    <span class="hint alert-success">Wprowadź poprawny mail</span>
-                </div>
-                <div class="form-group">
-                    <label for="password">Hasło</label>
-                    <input name="password_1" type="password" class="form-control" placeholder="Hasło">
-                    <span class="hint alert-success">Hasło musi posiadać przynajmniej 8 znaków. </span>
-                </div>
-                <div class="form-group">
-                    <label>Powtórz Hasło</label>
-                    <input name="password_2" type="password" class="form-control" placeholder="Hasło">
-                    <span class="hint alert-success">Wpisz ponownie to samo hasło.</span>
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input">
-                    <label class="form-check-label">Zapamiętaj Mnie</label>
-                </div>
-                <hr>
-                <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Zarejestruj</button>
-                <p class="text-center mt-2 mb-0 float-left">Masz już konto? <a href="#" style="color: purple;">Zaloguj się</a></p>
-            </form>
-        </div>
+      <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+        <form class="register-form" action="register.php" method="post">
+          <h2 class="text-center purple-text">Rejestracja</h2>
+          <hr>
+          <?php
+                if (isset($_SESSION['error'])) {
+    echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>';
+    unset($_SESSION['error']); // Usunięcie komunikatu o błędzie po wyświetleniu
+}
+
+
+
+                ?>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input name="email" type="email" class="form-control" placeholder="Wprowadź Email">
+            <span class="hint alert-success">Wprowadź poprawny mail</span>
+          </div>
+          <div class="form-group">
+            <label for="password">Hasło</label>
+            <input name="password_1" type="password" class="form-control" placeholder="Hasło">
+            <span class="hint alert-success">Hasło musi posiadać przynajmniej 8 znaków. </span>
+          </div>
+          <div class="form-group">
+            <label>Powtórz Hasło</label>
+            <input name="password_2" type="password" class="form-control" placeholder="Hasło">
+            <span class="hint alert-success">Wpisz ponownie to samo hasło.</span>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label">Zapamiętaj Mnie</label>
+          </div>
+          <hr>
+          <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Zarejestruj</button>
+          <p class="text-center mt-2 mb-0 float-left">Masz już konto? <a href="login.php" style="color: #fdf227;">Zaloguj się</a></p>
+        </form>
+      </div>
     </div>
   </div>
 
+</body>
+
+</html>
 
 
 
-  <footer class="text-white text-center text-lg-start bg-purple">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!--Grid row-->
-      <div class="row mt-4">
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
+<footer class="text-white text-center text-lg-start bg-purple">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row mt-4">
 
-          <p>
-            Tutaj Będzie NIP:
-          </p>
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
-          <p>
-            Firma wpisana do Rejestru Przedsiębiorców KRS
-            pod numerem:
-          </p>
+        <p>
+          Tutaj Będzie NIP:
+        </p>
 
-        </div>
-        <!--Grid column-->
+        <p>
+          Firma wpisana do Rejestru Przedsiębiorców KRS
+          pod numerem:
+        </p>
 
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-
-          <ul class="fa-ul" style="margin-left: 1.65em;">
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-4" style="color:White">Godziny Otwarcia Biura:</h5>
-
-          <table class="table text-center text-white">
-            <tbody class="font-weight-normal">
-              <tr>
-                <td>Poniedziałek - Piątek:</td>
-                <td>8 - 21</td>
-              </tr>
-              <tr>
-                <td>Sobota:</td>
-                <td>8 - 19</td>
-              </tr>
-              <tr>
-                <td>Niedziela:</td>
-                <td>13 - 19</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!--Grid column-->
       </div>
-      <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+      <!--Grid column-->
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+
+        <ul class="fa-ul" style="margin-left: 1.65em;">
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4" style="color:White">Godziny Otwarcia Biura:</h5>
+
+        <table class="table text-center text-white">
+          <tbody class="font-weight-normal">
+            <tr>
+              <td>Poniedziałek - Piątek:</td>
+              <td>8 - 21</td>
+            </tr>
+            <tr>
+              <td>Sobota:</td>
+              <td>8 - 19</td>
+            </tr>
+            <tr>
+              <td>Niedziela:</td>
+              <td>13 - 19</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+</footer>
+<!-- Grid container -->
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
 </body>
 
 </html>

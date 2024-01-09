@@ -46,13 +46,11 @@
         </button>
         <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="aboutus.html" class="nav-item nav-link active">O Nas</a>
-            <a href="offer.html" class="nav-item nav-link">Oferta</a>
-            <a href="project.html" class="nav-item nav-link">Newsletter</a>
-            <a href="profile.html" class="nav-item nav-link">Mój Profil</a>
-            <a href="register.html" class="nav-item nav-link">Dołącz</a>
-
+            <a href="index.php" class="nav-item nav-link">Home</a>
+            <a href="aboutus.php" class="nav-item nav-link active">O Nas</a>
+            <a href="offer.php" class="nav-item nav-link">Oferta</a>
+            <a href="login.php" class="nav-item nav-link">Mój Profil</a>
+            <a href="register.php" class="nav-item nav-link">Dołącz</a>
           </div>
         </div>
       </nav>
@@ -61,17 +59,17 @@
   <!-- Navbar Stop -->
 
   <!-- About 1    -->
-<section class="py-3 py-md-5">
+  <section class="py-3 py-md-5">
     <div class="container">
-      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center wow fadeInUp" data-wow-delay=".5s"">
-        <div class="col-12 col-lg-6 col-xl-5">
+      <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center wow fadeInUp" data-wow-delay=".5s">
+        <div class=" col-12 col-lg-6 col-xl-5">
           <img class="img-fluid rounded rotate-left wow fadeInUp" data-wow-delay=".3s" loading="lazy" src="img/About.jpg">
         </div>
         <div class="col-12 col-lg-6 col-xl-7">
           <div class="row justify-content-xl-center">
             <div class="col-12 col-xl-11">
-              <h2 class="mb-3 rotate-right wow fadeInUp" data-wow-delay=".6s">Kim Jesteśmy?</h2>
-              <p class="lead fs-4 text-secondary mb-3">We help people to build incredible brands and superior products. Our perspective is to furnish outstanding captivating services.</p>
+              <h2 class="mb-3 rotate-right hcolor wow fadeInUp" data-wow-delay=".6s">Kim Jesteśmy?</h2>
+              <p class="lead fs-4  mb-3">We help people to build incredible brands and superior products. Our perspective is to furnish outstanding captivating services.</p>
               <p class="mb-5 wow fadeInUp" data-wow-delay="1s">We are a fast-growing company, but we have never lost sight of our core values. We believe in collaboration, innovation, and customer satisfaction. We are always looking for new ways to improve our products and services.</p>
               <div class="row gy-4 gy-md-0 gx-xxl-5X wow fadeInUp" data-wow-delay="1.2s">
                 <div class="col-12 col-md-6">
@@ -82,8 +80,8 @@
                       </svg>
                     </div>
                     <div>
-                      <h2 class="h4 mb-3">Versatile Brand</h2>
-                      <p class="text-secondary mb-0">We are crafting a digital method that subsists life across all mediums.</p>
+                      <h2 class="h4 hcolor mb-3">Versatile Brand</h2>
+                      <p class=" mb-0">We are crafting a digital method that subsists life across all mediums.</p>
                     </div>
                   </div>
                 </div>
@@ -95,8 +93,8 @@
                       </svg>
                     </div>
                     <div>
-                      <h2 class="h4 mb-3">Digital Agency</h2>
-                      <p class="text-secondary mb-0">We believe in innovation by merging primary with elaborate ideas.</p>
+                      <h2 class="h4 mb-3 hcolor">Digital Agency</h2>
+                      <p class=" mb-0">We believe in innovation by merging primary with elaborate ideas.</p>
                     </div>
                   </div>
                 </div>
@@ -110,46 +108,45 @@
 
 
   <div class="container py-5">
-  <!-- For demo purpose -->
-  <header class="text-center text-white wow fadeInUp" data-wow-delay="2s">
+    <header class="text-center text-white wow fadeInUp" data-wow-delay="2s">
       <h1 class="display-4">Firmy z jakimi współpracowaliśmy:</h1>
-  </header>
+    </header>
 
-  <div class="row py-5">
+    <div class="row py-5">
       <div class="col-lg-7 mx-auto">
-          <div class="card shadow mb-4 wow fadeInUp" data-wow-delay="2.2s">
-              <div class="card-body p-5">
-                  <h4 class="mb-4 wow fadeInUp" data-wow-delay="2.4s">Przy realizacji usług :</h4>
-                  <!-- Unordered list -->
-                  <ul class="wow fadeInUp" data-wow-delay="2.6s">
-                      <li class="mb-2">Silesia Promed Sp. z o.o. Zabrze.</li>
-                      <li class="mb-2">ArsJosta Consulting Sp. z o.o. Zabrze.</li>
-                      <li class="mb-2">Kabir Sp. z o.o. Zabrze.</li>
-                      <li class="mb-2">Alumat S.C. Zabrze. </li>
-                      <li class="mb-2">Despol Sp. z o.o. Będzin.</li>
-                      <li class="mb-2">Solidglas Sp. z o.o. Zabrze.</li>
-                      <li class="mb-2">FPHU MINOR Zabrze.</li>
-                      <li class="mb-2">Dual Sp. z o.o . Będzin.</li>
-                      <li class="mb-2">Evatronix S.A. Bielsko-Biała,Gliwice.</li>
-                      <li class="mb-2">Unikol Sp. z o.o. Zabrze.</li>
-                      <li class="mb-2">Unikol Budownictwo Sp. z o.o. Zabrze.</li>
-                      <li class="mb-2">Miejski Ośrodek Sportów i Rekreacji w Zabrzu.</li>
-                      <li class="mb-2">NFI Fund 1 Warszawa</li>
-                      <li class="mb-2">Fundusz Górnośląski Katowice.</li>
-                      <li class="mb-2">Auto Color Service A.Costazza Zabrze.</li>
-                      <li class="mb-2">KORMAKS Zabrze, Warszawa.</li>
-                      <li class="mb-2">Progresor Sp. z o.o. Zabrze.</li>
-                      <li class="mb-2">PHU ADAM Chorzów.</li>
-                      <li class="mb-2">PHU JAKUB S.C. Katowice.</li>
-                      <li class="mb-2">I wiele innych...</li>
-                  </ul>
-              </div>
+        <div class="card shadow mb-4 wow fadeInUp" data-wow-delay="2.2s">
+          <div class="card-body p-5">
+            <h4 class="mb-4 wow fadeInUp hcolor-black" data-wow-delay="2.4s">Przy realizacji usług :</h4>
+            <!-- Unordered list -->
+            <ul class="wow fadeInUp hcolor-black" data-wow-delay="2.6s">
+              <li class="mb-2">Silesia Promed Sp. z o.o. Zabrze.</li>
+              <li class="mb-2">ArsJosta Consulting Sp. z o.o. Zabrze.</li>
+              <li class="mb-2">Kabir Sp. z o.o. Zabrze.</li>
+              <li class="mb-2">Alumat S.C. Zabrze. </li>
+              <li class="mb-2">Despol Sp. z o.o. Będzin.</li>
+              <li class="mb-2">Solidglas Sp. z o.o. Zabrze.</li>
+              <li class="mb-2">FPHU MINOR Zabrze.</li>
+              <li class="mb-2">Dual Sp. z o.o . Będzin.</li>
+              <li class="mb-2">Evatronix S.A. Bielsko-Biała,Gliwice.</li>
+              <li class="mb-2">Unikol Sp. z o.o. Zabrze.</li>
+              <li class="mb-2">Unikol Budownictwo Sp. z o.o. Zabrze.</li>
+              <li class="mb-2">Miejski Ośrodek Sportów i Rekreacji w Zabrzu.</li>
+              <li class="mb-2">NFI Fund 1 Warszawa</li>
+              <li class="mb-2">Fundusz Górnośląski Katowice.</li>
+              <li class="mb-2">Auto Color Service A.Costazza Zabrze.</li>
+              <li class="mb-2">KORMAKS Zabrze, Warszawa.</li>
+              <li class="mb-2">Progresor Sp. z o.o. Zabrze.</li>
+              <li class="mb-2">PHU ADAM Chorzów.</li>
+              <li class="mb-2">PHU JAKUB S.C. Katowice.</li>
+              <li class="mb-2">I wiele innych...</li>
+            </ul>
           </div>
+        </div>
 
 
       </div>
+    </div>
   </div>
-</div>
 
 
 
@@ -159,6 +156,7 @@
     <div class="container p-4">
       <!--Grid row-->
       <div class="row mt-4">
+
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
@@ -220,22 +218,22 @@
       </div>
       <!--Grid row-->
     </div>
-    <!-- Grid container -->
+  </footer>
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

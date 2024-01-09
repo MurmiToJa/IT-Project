@@ -1,44 +1,70 @@
 <?php
 session_start();
 
-include('php/connect.php');
-
+include('connect.php');
 
 $email = "";
-$errors = array(); 
-
+$errors = array();
+$success = "";
 
 if (isset($_POST['reg_user'])) {
-    
-    $email = mysqli_real_escape_string($db, $_POST['email']);
-    $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-    $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
-    
-    if (empty($email)) { array_push($errors, "Email is required"); }
-    if (empty($password_1)) { array_push($errors, "Password is required"); }
+    $email = $_POST['email'];
+    $password_1 = $_POST['password_1'];
+    $password_2 = $_POST['password_2'];
+
+    if (empty($email)) {
+        array_push($errors, "Email jest wymagany");
+    }
+    if (empty($password_1)) {
+        array_push($errors, "Hasło jest wymagane");
+    }
     if ($password_1 != $password_2) {
-        array_push($errors, "The two passwords do not match");
+        array_push($errors, "Hasła nie pasują do siebie.");
     }
 
+    $stmt = $db->prepare("SELECT * FROM users WHERE Email=:email LIMIT 1");
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    $user_check_query = "SELECT * FROM users WHERE email='$email' LIMIT 1";
-    $result = mysqli_query($db, $user_check_query);
-    $user = mysqli_fetch_assoc($result);
-  
-    if ($user) { 
-        array_push($errors, "Email already exists");
+    if ($user) {
+        array_push($errors, "Konto założone na dany mail już istnieje.");
     }
-
 
     if (count($errors) == 0) {
-        $password = md5($password_1); // encrypt the password before saving in the database
+        // Brak błędów - wykonaj dalszą część kodu
+        $hashed_password = password_hash($password_1, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO users (email, password) VALUES('$email', '$password')";
-        mysqli_query($db, $query);
+        $stmt = $db->prepare("INSERT INTO users (Login, Haslo, Email) VALUES(:email, :password, :email)");
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $hashed_password);
+        $stmt->execute();
+
         $_SESSION['email'] = $email;
         $_SESSION['success'] = "You are now registered and logged in";
-        header('location: index.php');
+        $success = "Registration successful";
+		
+		
+		$new_user_query = "SELECT Id_klienta FROM users WHERE Email='$email' LIMIT 1";
+        $new_user_result = mysqli_query($db, $new_user_query);
+        $new_user_data = mysqli_fetch_assoc($new_user_result);
+        $id_klienta = $new_user_data['Id_klienta'];
+
+        // Przypisz id_klienta do sesji
+        $_SESSION['id_klienta'] = $id_klienta;
+		
+		
+		
+		
+		 header('location: user.php');
+		
+    }else
+    {
+    $_SESSION['error'] = implode("<br>", $errors);
+    $_SESSION['success'] = $success;
     }
 }
+
+
 ?>

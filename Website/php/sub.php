@@ -1,24 +1,43 @@
 <?php
-include 'connect.php';
+session_start();
 
-if (isset($_POST['email'])) {
-   
-    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        exit('Please provide a valid email address!');
+include('connect.php'); 
+
+$errors = array();
+$success = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
+
+        
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "Nieprawidłowy format adresu e-mail";
+        }
+
+       
+        if (count($errors) == 0) {
+           
+            $stmt = $db->prepare("INSERT INTO newsletter (mail) VALUES(:email)");
+            $stmt->bindParam(':email', $email);
+			header('location: ../index.php');
+
+            if ($stmt->execute()) {
+                $success = "Adres e-mail został pomyślnie zapisany";
+				header('location: ../index.php');
+            } else {
+                $errors[] = "Błąd podczas zapisywania adresu e-mail";
+				header('location: ../index.php');
+            }
+        }
     }
-    
-    $stmt = $pdo->prepare('SELECT * FROM subscribers WHERE email = ?');
-    $stmt->execute([ $_POST['email'] ]);
-    if ($stmt->fetch(PDO::FETCH_ASSOC)) {
-        exit('You\'re already a subscriber!');
-    }
-    
-    $stmt = $pdo->prepare('INSERT INTO subscribers (email,date_subbed) VALUES (?,?)');
-    $stmt->execute([ $_POST['email'], date('Y-m-d\TH:i:s') ]);
-    
-    exit('Thank you for subscribing!');
-} else {
-    
-    exit('Please provide a valid email address!');
 }
+
+
+$_SESSION['errors'] = $errors;
+$_SESSION['success'] = $success;
+
+
+ 
+
 ?>
