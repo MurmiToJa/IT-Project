@@ -1,3 +1,4 @@
+<?php include('php/admin.php') ?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -46,11 +47,11 @@
         </button>
         <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="aboutus.html" class="nav-item nav-link active">O Nas</a>
-            <a href="offer.html" class="nav-item nav-link">Oferta</a>
-            <a href="login.html" class="nav-item nav-link">Mój Profil</a>
-            <a href="register.html" class="nav-item nav-link ">Dołącz</a>
+            <a href="index.php" class="nav-item nav-link ">Home</a>
+            <a href="aboutus.php" class="nav-item nav-link">O Nas</a>
+            <a href="offer.php" class="nav-item nav-link">Oferta</a>
+            <a href="login.php" class="nav-item nav-link active">Mój Profil</a>
+            <a href="register.php" class="nav-item nav-link">Dołącz</a>
           </div>
         </div>
       </nav>
@@ -61,101 +62,100 @@
 
 
 
-  <div class="container py-5">
+ <div class="container py-5">
     <!-- For demo purpose -->
     <header class="text-center text-white wow fadeInUp" data-wow-delay="1s">
-      <h1 class="display-4">Zapisani do newslettera:</h1>
+        <h1 class="display-4">Zapisani do newslettera:</h1>
     </header>
 
     <div class="row py-5">
-      <div class="col-lg-7 mx-auto">
-        <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
-          <div class="card-body p-5">
-            <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista zapisanych:</h4>
-            <!-- Table to display emails -->
-            <table class="table wow fadeInUp" data-wow-delay=".6s">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">E-mail</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                  // Przykładowa tablica z danymi e-maili
-                  $emailData = array(
-                  "user1@example.com",
-                  "user2@example.com",
-                  "user3@example.com",
-                  // Dodaj więcej e-maili w razie potrzeby
-                  );
+        <div class="col-lg-7 mx-auto">
+            <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
+                <div class="card-body p-5">
+                    <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista zapisanych:</h4>
+                    <!-- Table to display emails -->
+                    <table class="table wow fadeInUp" data-wow-delay=".6s">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">E-mail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            // Wyświetlanie e-maili z bazy danych w tabeli
+                            foreach ($emails as $index => $email) {
+                                // Dodanie atrybutu data-email do komórki zawierającej maila
+                                echo '<tr>';
+                                echo '<th scope="row">' . ($index + 1) . '</th>';
+                                echo '<td data-email>' . $email['mail'] . '</td>';
+                                echo '</tr>';
+                            }
+                            ?>
+                        </tbody>
+                    </table>
 
-                  // Wyświetlanie e-maili w tabeli
-                  foreach ($emailData as $index => $email) {
-                  // Dodanie atrybutu data-email do komórki zawierającej maila
-                  echo '<tr>';
-                    echo '<th scope="row">' . ($index + 1) . '</th>';
-                    echo '<td data-email>' . $email . '</td>';
-                    echo '</tr>';
-                  }
-                  ?>
-              </tbody>
-            </table>
+                    <!-- Button to export emails -->
+                    <button class="btn btn-primary" id="exportBtn">Export</button>
 
-            <!-- Button to export emails -->
-            <button class="btn btn-primary" id="exportBtn">Export</button>
-
-          </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
 
   <div class="container py-5">
-    <!-- For demo purpose -->
     <header class="text-center text-white wow fadeInUp" data-wow-delay="1s">
-      <h1 class="display-4">Osoby do skontaktowania:</h1>
+        <h1 class="display-4">Osoby do skontaktowania:</h1>
     </header>
 
     <div class="row py-5">
-      <div class="col-lg-7 mx-auto">
-        <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
-          <div class="card-body p-5">
-            <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista kontaktów:</h4>
-            <!-- Formularz z listą osób -->
-            <form id="contactForm">
-              <?php
-  
-
-            // Wyświetlanie osób w formularzu
-            foreach ($firmData as $index => $firm) {
-              echo '<div class="mb-3">';
-              echo '<label for="name' . $index . '">Imię:</label>';
-              echo '<input type="text" class="form-control" id="name' . $index . '" name="name' . $index . '" required>';
-
-              echo '<label for="surname' . $index . '">Nazwisko:</label>';
-              echo '<input type="text" class="form-control" id="surname' . $index . '" name="surname' . $index . '" required>';
-
-              echo '<label for="phone' . $index . '">Nr telefonu:</label>';
-              echo '<input type="tel" class="form-control" id="phone' . $index . '" name="phone' . $index . '" required>';
-
-              echo '<label for="date' . $index . '">Data:</label>';
-              echo '<input type="date" class="form-control" id="date' . $index . '" name="date' . $index . '" required>';
-
-              echo '<button type="button" class="btn btn-primary mt-2" onclick="markContacted(' . $index . ')">Check</button>';
-              echo '</div>';
-            }
-            ?>
-            </form>
-          </div>
+        <div class="col-lg-9 mx-auto">
+            <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
+                <div class="card-body p-5">
+                    <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista kontaktów:</h4>
+                    <!-- Formularz z listą osób -->
+                    <form id="contactForm" method="post" action="php/delete_meetings.php">
+                        <table class="table wow fadeInUp" data-wow-delay=".6s">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID Klienta</th>
+                                    <th scope="col">Imię</th>
+                                    <th scope="col">Nazwisko</th>
+                                    <th scope="col">Mail</th>
+                                    <th scope="col">Data spotkania</th>
+                                    <th scope="col">Checkbox</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                // Wyświetlanie osób w formularzu
+                                foreach ($firmData as $index => $firm) {
+                                    echo '<tr>';
+                                    echo '<td>' . $firm['Id_klienta'] . '</td>';
+                                    echo '<td>' . $firm['Imie'] . '</td>';
+                                    echo '<td>' . $firm['Nazwisko'] . '</td>';
+                                    echo '<td>' . $firm['Email'] . '</td>';
+                                    echo '<td>' . $firm['Godziny_spotkania'] . '</td>';
+                                    echo '<td><input type="checkbox" name="deleteMeetings[]" value="' . $firm['Id_klienta'] . '"></td>';
+                                    echo '</tr>';
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                        <!-- Button to delete selected meetings -->
+                        <button type="submit" class="btn btn-danger" id="deleteMeetingsBtn">Usuń zaznaczone spotkania</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
-
-
+				<form action="php/logout.php" method="post">
+                    <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
+                </form>
 
   <footer class="text-white text-center text-lg-start bg-purple">
     <!-- Grid container -->

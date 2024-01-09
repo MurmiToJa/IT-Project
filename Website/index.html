@@ -1,3 +1,4 @@
+<?php include('php/sub.php') ?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -29,6 +30,8 @@
 
 
   <title>FinTax</title>
+
+
 </head>
 
 <body>
@@ -46,11 +49,11 @@
         </button>
         <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="aboutus.html" class="nav-item nav-link">O Nas</a>
-            <a href="offer.html" class="nav-item nav-link">Oferta</a>
-            <a href="login.html" class="nav-item nav-link">Mój Profil</a>
-            <a href="register.html" class="nav-item nav-link">Dołącz</a>
+            <a href="index.php" class="nav-item nav-link active">Home</a>
+            <a href="aboutus.php" class="nav-item nav-link">O Nas</a>
+            <a href="offer.php" class="nav-item nav-link">Oferta</a>
+            <a href="login.php" class="nav-item nav-link">Mój Profil</a>
+            <a href="register.php" class="nav-item nav-link">Dołącz</a>
           </div>
         </div>
       </nav>
@@ -114,7 +117,7 @@
   <div class="container-fluid services py-5">
     <div class="container text-center py-5">
       <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
-        <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Informacje o nas</h5>
+        <h5 class="mb-2 px-3 py-1 rounded-pill d-inline-block border border-2 border-primary">Informacje o nas</h5>
         <h1 class="display-5">FinTax</h1>
       </div>
       <div class="row g-5">
@@ -202,7 +205,7 @@
             <div class="rotate-left bg-dark"></div>
             <div class="rotate-right bg-dark"></div>
             <img src="img/about-img.jpg" class="img-fluid h-100" alt="img">
-            <div class="bg-white experiences">
+            <div class=" experiences">
               <h1 class="display-3">27</h1>
               <h6 class="fw-bold">Lat Doświadczenia </h6>
             </div>
@@ -210,7 +213,7 @@
         </div>
         <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".6s">
           <div class="about-item overflow-hidden">
-            <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">O FinTax</h5>
+            <h5 class="mb-2 px-3 py-1 rounded-pill d-inline-block border border-2 border-primary">O FinTax</h5>
             <h1 class="display-5 mb-2 ">Nasza Historia i Dla Kogo Jesteśmy</h1>
             <p class="fs-5 " style="text-align: justify;">Spółka powstała w 1996 roku na bazie dotychczasowych doświadczeń i kontaktów w zakresie prowadzenia kompleksowych
               usług rachunkowości dla małych i średnich przedsiębiorstw z terenu Śląska i okolic.</p>
@@ -280,14 +283,24 @@
       <div class="row mt-4">
         <div class="newsletter-subscribe container-fluid start_text">
           <div class="container">
-            <div class="intro">
-              <h1 class="text-center newsletter wow fadeInUp" data-wow-delay=".6s">Zapisz się do naszego newslettera</h1>
-              <p class="text-center wow fadeInUp" data-wow-delay=".9s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+            <div class="newsletter-subscribe container-fluid start_text">
+              <div class="container">
+                <div class="intro">
+                  <h1 class="text-center newsletter wow fadeInUp" data-wow-delay=".6s">Zapisz się do naszego newslettera</h1>
+                  <p class="text-center wow fadeInUp" data-wow-delay=".9s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+                <form class="form-inline wow fadeInUp" data-wow-delay="1.1s" method="post" action="php/sub.php">
+                  <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="Twój e-mail" required>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Subskrybuj </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <form class="form-inline wow fadeInUp" data-wow-delay="1.1s" method="post">
-              <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Twój e-mail"></div>
-              <div class="form-group"><button class="btn btn-primary" type="button">Subskrybuj </button></div>
-            </form>
+
           </div>
         </div>
         <!--Grid column-->

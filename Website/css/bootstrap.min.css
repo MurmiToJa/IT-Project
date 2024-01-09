@@ -28,7 +28,12 @@
   --bs-dark: #111111;
   --bs-font-sans-serif: sans-serif;
   --bs-font-monospace: sans-serif;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-more-dark: #272727;
+  --bs-less-dark: #2f2f2f;
+  --bs-gold: rgb(255, 182, 51);
+  --bs-textl-dark: white;
+  --bs-textm-dark: rgb(183, 183, 183);
 }
 
 *,
@@ -49,8 +54,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #555;
-  background-color: #fff;
+  color: var(--bs-textm-dark);
+  background-color: var(--bs-less-dark);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
@@ -85,7 +90,15 @@ h1,
   font-weight: 700;
   line-height: 1.2;
   font-stretch: semi-expanded;
-  color: #111;
+  color: white;
+}
+
+.hcolor {
+  color: #fdf227;
+}
+
+.hcolor-black {
+  color: black;
 }
 
 h1,
@@ -3145,8 +3158,8 @@ fieldset:disabled .btn {
 
 .btn-primary {
   color: #000;
-  background-color: #fdf001;
-  border-color: #fdf001
+  background-color: #fdf227;
+  border-color: #fdf227;
 }
 
 .btn-primary:hover {
@@ -8430,7 +8443,7 @@ fieldset:disabled .btn {
 }
 
 .bg-light {
-  background-color: #f5f6f6 !important
+  background-color: var(--bs-more-dark) !important
 }
 
 .bg-dark {
@@ -8480,7 +8493,9 @@ fieldset:disabled .btn {
 }
 
 .rounded {
-  border-radius: 10px !important
+  border-radius: 10px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 20px 0px;
+
 }
 
 .rounded-0 {

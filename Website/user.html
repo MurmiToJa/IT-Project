@@ -1,4 +1,6 @@
+<?php include('php/user.php') ?>
 <!DOCTYPE html>
+
 <html lang="pl">
 
 <head>
@@ -45,12 +47,11 @@
         </button>
         <div class="collapse navbar-collapse me-n3" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="aboutus.html" class="nav-item nav-link">O Nas</a>
-            <a href="offer.html" class="nav-item nav-link">Oferta</a>
-            <a href="login.html" class="nav-item nav-link active">Mój Profil</a>
-            <a href="register.html" class="nav-item nav-link">Dołącz</a>
-
+            <a href="index.php" class="nav-item nav-link active">Home</a>
+            <a href="aboutus.php" class="nav-item nav-link">O Nas</a>
+            <a href="offer.php" class="nav-item nav-link">Oferta</a>
+            <a href="login.php" class="nav-item nav-link">Mój Profil</a>
+            <a href="register.php" class="nav-item nav-link">Dołącz</a>
           </div>
         </div>
       </nav>
@@ -59,40 +60,43 @@
   <!-- Navbar Stop -->
 
   <!-- Form Section Start -->
-  <div class="container mt-5">
+<div class="container mt-5">
     <div class="container padded animated slideInLeft">
-      <div class="row">
-        <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
-          <form class="register-form" action="register.php" method="post">
-            <h2 class="text-center purple-text">Formularz zgłoszeniowy</h2>
-            <hr>
-            <div class="form-group">
-              <label for="email">Imię</label>
-              <input name="email" type="email" class="form-control" placeholder="Imię">
-              <span class="hint alert-success">Wprowadź swoje Imię</span>
+        <div class="row">
+            <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+                <form class="register-form" action="user.php" method="post">
+                    <h2 class="text-center purple-text">Formularz zgłoszeniowy</h2>
+                    <hr>
+                    <div class="form-group">
+                        <label for="imie">Imię</label>
+                        <input name="imie" type="text" class="form-control" placeholder="Imię" value="<?php echo isset($imie) ? htmlspecialchars($imie) : ''; ?>">
+                        <span class="hint alert-success">Wprowadź swoje Imię</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nazwisko">Nazwisko</label>
+                        <input name="nazwisko" type="text" class="form-control" placeholder="Nazwisko" value="<?php echo isset($nazwisko) ? htmlspecialchars($nazwisko) : ''; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefon">Numer telefonu</label>
+                        <input name="telefon" type="text" class="form-control" placeholder="999 xxx xxx" maxlength="9" value="<?php echo isset($telefon) ? htmlspecialchars($telefon) : ''; ?>">
+                        <span class="hint alert-success">Wpisz numer telefonu (maksymalnie 9 cyfr).</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactTime">Data spotkania</label>
+                        <input type="datetime-local" class="form-control" name="contactTime" id="contactTime" required value="<?php echo isset($godziny_spotkania) ? htmlspecialchars($godziny_spotkania) : ''; ?>">
+                    </div>
+                    <hr>
+                    <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Wprowadź</button>
+					
+                </form>
+				<!-- Przycisk do wylogowania -->
+                <form action="logout.php" method="post">
+                    <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
+                </form>
             </div>
-            <div class="form-group">
-              <label for="password">Nazwsiko</label>
-              <input name="password_1" type="password" class="form-control" placeholder="Nazwisko">
-              <span class="hint alert-success">Hasło musi posiadać przynajmniej 8 znaków. </span>
-            </div>
-            <div class="form-group">
-              <label>Numer telefonu</label>
-              <input name="password_2" type="password" class="form-control" placeholder="999 xxx xxx">
-              <span class="hint alert-success">Wpisz ponownie to samo hasło.</span>
-            </div>
-            <div class="form-group">
-              <label>Data spotkania</label>
-              <input type="datetime-local" class="form-control" id="contactTime" required>
-            </div>
-            <hr>
-            <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Zarejestruj</button>
-            <p class="text-center mt-2 mb-0 float-left">Wprowadziłeś już dane? <a href="#" style="color: purple;">Sprawdź dane.</a></p>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
   <!-- Form Section End -->
 
