@@ -69,8 +69,8 @@
           <div class="row justify-content-xl-center">
             <div class="col-12 col-xl-11">
               <h2 class="mb-3 rotate-right hcolor wow fadeInUp" data-wow-delay=".6s">Kim Jesteśmy?</h2>
-              <p class="lead fs-4  mb-3">We help people to build incredible brands and superior products. Our perspective is to furnish outstanding captivating services.</p>
-              <p class="mb-5 wow fadeInUp" data-wow-delay="1s">We are a fast-growing company, but we have never lost sight of our core values. We believe in collaboration, innovation, and customer satisfaction. We are always looking for new ways to improve our products and services.</p>
+              <p class="lead fs-4  mb-3">Jesteśmy lokalnym biurem rachunkowym, które skupia się na pomocy naszym klientom. Staramy się poprawiać działanie ich firm aby jak najmniej czasu poświęcali kwestiom rachunkowym czy prawnym, a więcej czasu mogli skupić się na rozwoju swojej firmy.</p>
+              <p class="mb-5 wow fadeInUp" data-wow-delay="1s">Na rynku księgowo-rachunkowym działamy już od 28 lat, w tym czasie pomogliśmy wielu lokalnym firmą więc jest duża szansa, że twoje problemy też będą nam znane.</p>
               <div class="row gy-4 gy-md-0 gx-xxl-5X wow fadeInUp" data-wow-delay="1.2s">
                 <div class="col-12 col-md-6">
                   <div class="d-flex">
@@ -80,8 +80,8 @@
                       </svg>
                     </div>
                     <div>
-                      <h2 class="h4 hcolor mb-3">Versatile Brand</h2>
-                      <p class=" mb-0">We are crafting a digital method that subsists life across all mediums.</p>
+                      <h2 class="h4 hcolor mb-3">Wszechstronna marka</h2>
+                      <p class=" mb-0">Staramy się w jak największym stopniu pomóc twojej firmie od księgowości po kwestie prawne czy marketingowe.</p>
                     </div>
                   </div>
                 </div>
@@ -93,8 +93,8 @@
                       </svg>
                     </div>
                     <div>
-                      <h2 class="h4 mb-3 hcolor">Digital Agency</h2>
-                      <p class=" mb-0">We believe in innovation by merging primary with elaborate ideas.</p>
+                      <h2 class="h4 mb-3 hcolor">Inspektorat budowlany</h2>
+                      <p class=" mb-0">Jeżeli potrzebujesz wsparcia w twojej budowie, sprawdzenia poprawności prawnej budowanej przez ciebie nieruchomości czy innych kwestii związanych z kwestiami budowlanymi.</p>
                     </div>
                   </div>
                 </div>
@@ -162,12 +162,11 @@
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
           <p>
-            Tutaj Będzie NIP:
+            NIP: 640 170 31 31
           </p>
 
           <p>
-            Firma wpisana do Rejestru Przedsiębiorców KRS
-            pod numerem:
+            REGON: 243102614
           </p>
 
         </div>
@@ -178,16 +177,13 @@
 
           <ul class="fa-ul" style="margin-left: 1.65em;">
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">ul. Ostatnia 3, 41-909 Bytom</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">hometom@tlen.pl</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">601 882 239</span>
             </li>
           </ul>
         </div>

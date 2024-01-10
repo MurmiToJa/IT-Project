@@ -41,7 +41,7 @@
   <div class="container-fluid bg-purple">
     <div class="container">
       <nav class="navbar navbar-dark navbar-expand-lg py-lg-0">
-        <a href="index.html" class="navbar-brand">
+        <a href="index.php" class="navbar-brand">
           <h1 class="text-primary mb-0 display-5">Fin<span class="text-white">Tax</span></h1>
         </a>
         <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -125,12 +125,12 @@
           <div class="bg-light rounded p-5 services-item">
             <div class="d-flex" style="align-items: center; justify-content: center;">
               <div class="mb-4 rounded-circle services-inner-icon">
-                <i class="fa fa-spider fa-3x text-primary"></i>
+                <i class="fa fa-building fa-3x text-primary"></i>
               </div>
             </div>
             <h4>Siedziba</h4>
             <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisc elit sed.</p>
-            <a href="aboutus.html">
+            <a href="aboutus.php">
               <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Więcej</button>
             </a>
           </div>
@@ -139,26 +139,26 @@
           <div class="bg-light rounded p-5 services-item">
             <div class="d-flex" style="align-items: center; justify-content: center;">
               <div class="mb-4 rounded-circle services-inner-icon">
-                <i class="fa fa-spider fa-3x text-primary"></i>
+                <i class="fa fa-mobile fa-3x text-primary"></i>
               </div>
             </div>
-            <a href="aboutus.html">
-              <h4 class="text-center">Zadzwoń</h4>
-            </a>
+            <h4 class="text-center">Zadzwoń</h4>
             <p class="text-center fs-5">Lorem ipsum dolor sit amet consectetur adipisc elit sed.</p>
-            <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Więcej</button>
+            <a href="aboutus.php">
+              <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Więcej</button>
+            </a>
           </div>
         </div>
         <div class="col-xxl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay=".7s">
           <div class="bg-light rounded p-5 services-item">
             <div class="d-flex" style="align-items: center; justify-content: center;">
               <div class="mb-4 rounded-circle services-inner-icon">
-                <i class="fa fa-spider fa-3x text-primary"></i>
+                <i class="fa fa-clock-o fa-3x text-primary"></i>
               </div>
             </div>
             <h4 class="text-center">Godziny Biura</h4>
             <p class="text-center fs-5">Lorem ipsum dolor sit amet consectetur adipisc elit sed.</p>
-            <a href="aboutus.html">
+            <a href="aboutus.php">
               <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Więcej</button>
             </a>
           </div>
@@ -167,18 +167,18 @@
           <div class="bg-light rounded p-5 services-item">
             <div class="d-flex" style="align-items: center; justify-content: center;">
               <div class="mb-4 rounded-circle services-inner-icon">
-                <i class="fa fa-spider fa-3x text-primary"></i>
+                <i class="fa fa-envelope-o fa-3x text-primary"></i>
               </div>
             </div>
             <h4 class="text-center">Email</h4>
             <p class="text-center fs-5">Lorem ipsum dolor sit amet consectetur adipisc elit sed.</p>
-            <a href="aboutus.html">
+            <a href="aboutus.php">
               <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3">Więcej</button>
             </a>
           </div>
         </div>
       </div>
-      <a href="aboutus.html">
+      <a href="aboutus.php">
         <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-4 wow fadeInUp" data-wow-delay=".6s">Więcj Informacji o Nas</button>
       </a>
     </div>
@@ -206,7 +206,7 @@
             <div class="rotate-right bg-dark"></div>
             <img src="img/about-img.jpg" class="img-fluid h-100" alt="img">
             <div class=" experiences">
-              <h1 class="display-3">27</h1>
+              <h1 class="display-3">28</h1>
               <h6 class="fw-bold">Lat Doświadczenia </h6>
             </div>
           </div>
@@ -263,7 +263,9 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-5">Więcej Naszych Usług</button>
+            <a href="offer.php">
+              <button type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-5">Więcej Naszych Usług</button>
+            </a>
           </div>
         </div>
       </div>
@@ -282,38 +284,37 @@
       <!--Grid row-->
       <div class="row mt-4">
         <div class="newsletter-subscribe container-fluid start_text">
-          <div class="container">
 
-            <div class="newsletter-subscribe container-fluid start_text">
-              <div class="container">
-                <div class="intro">
-                  <h1 class="text-center newsletter wow fadeInUp" data-wow-delay=".6s">Zapisz się do naszego newslettera</h1>
-                  <p class="text-center wow fadeInUp" data-wow-delay=".9s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </div>
-                <form class="form-inline wow fadeInUp" data-wow-delay="1.1s" method="post" action="php/sub.php">
-                  <div class="form-group">
-                    <input class="form-control" type="email" name="email" placeholder="Twój e-mail" required>
-                  </div>
-                  <div class="form-group">
-                    <button class="btn btn-primary" type="submit">Subskrybuj </button>
-                  </div>
-                </form>
-              </div>
+
+          <div class="newsletter-subscribe container-fluid start_text">
+
+            <div class="intro">
+              <h1 class="text-center newsletter wow fadeInUp" data-wow-delay=".6s">Zapisz się do naszego newslettera</h1>
+              <p class="text-center wow fadeInUp" data-wow-delay=".9s">Nie przegap najnowszych informacji i ekskluzywnych ofert! Zapisz się do naszego newslettera i bądź na bieżąco z fascynującymi treściami, specjalnymi promocjami oraz niespodziankami, które przygotowaliśmy specjalnie dla Ciebie. Dołącz do naszej społeczności już teraz i czerp korzyści z inspirującej dawki wiedzy i nowości! </p>
             </div>
+            <form class="form-inline wow fadeInUp" data-wow-delay="1.1s" method="post" action="php/sub.php">
+              <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Twój e-mail" required>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Subskrybuj </button>
+              </div>
+            </form>
 
           </div>
+
+
         </div>
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
           <p>
-            Tutaj Będzie NIP:
+            NIP: 640 170 31 31
           </p>
 
           <p>
-            Firma wpisana do Rejestru Przedsiębiorców KRS
-            pod numerem:
+            REGON: 243102614
           </p>
 
         </div>
@@ -324,16 +325,13 @@
 
           <ul class="fa-ul" style="margin-left: 1.65em;">
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">ul. Ostatnia 3, 41-909 Bytom</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">hometom@tlen.pl</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">601 882 239</span>
             </li>
           </ul>
         </div>

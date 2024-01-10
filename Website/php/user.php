@@ -1,23 +1,30 @@
 <?php
 session_start();
 
+// Połączenie z bazą danych
 include('connect.php');
 
 $errors = array();
 $success = "";
 
-if (isset($_POST['reg_user'])) {
+// Sprawdzenie, czy użytkownik jest zalogowany
+if (!isset($_SESSION['id_klienta'])) {
+    
+    header('location: login.php');
+    exit(); 
+}
 
+if (isset($_POST['reg_user'])) {
     $imie = $_POST['imie'];
     $nazwisko = $_POST['nazwisko'];
     $telefon = $_POST['telefon'];
-    $godziny_spotkania = $_POST['contactTime']; // Zmieniłem to na zgodne z nazwą w formularzu
+    $godziny_spotkania = $_POST['contactTime'];
 
-    // Pobranie id_klienta z sesji (upewnij się, że jest zalogowany użytkownik)
+  
     if (isset($_SESSION['id_klienta'])) {
         $id_klienta = $_SESSION['id_klienta'];
 
-        // Sprawdzenie, czy klient o danym ID już istnieje w tabeli clients
+        
         $stmt_check = $db->prepare("SELECT * FROM clients WHERE Id_klienta = :id_klienta");
         $stmt_check->bindParam(':id_klienta', $id_klienta);
         $stmt_check->execute();

@@ -62,27 +62,27 @@
 
 
 
- <div class="container py-5">
+  <div class="container py-5">
     <!-- For demo purpose -->
-    <header class="text-center text-white wow fadeInUp" data-wow-delay="1s">
-        <h1 class="display-4">Zapisani do newslettera:</h1>
+    <header class="text-center wow fadeInUp" data-wow-delay="1s">
+      <h1 class="display-4">Zapisani do newslettera:</h1>
     </header>
 
     <div class="row py-5">
-        <div class="col-lg-7 mx-auto">
-            <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
-                <div class="card-body p-5">
-                    <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista zapisanych:</h4>
-                    <!-- Table to display emails -->
-                    <table class="table wow fadeInUp" data-wow-delay=".6s">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">E-mail</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
+      <div class="col-lg-7 mx-auto">
+        <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
+          <div class="card-body p-5">
+            <h4 class="mb-4 wow text-black fadeInUp" data-wow-delay=".4s">Lista zapisanych:</h4>
+            <!-- Table to display emails -->
+            <table class="table wow fadeInUp" data-wow-delay=".6s">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">E-mail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
                             // Wyświetlanie e-maili z bazy danych w tabeli
                             foreach ($emails as $index => $email) {
                                 // Dodanie atrybutu data-email do komórki zawierającej maila
@@ -92,44 +92,44 @@
                                 echo '</tr>';
                             }
                             ?>
-                        </tbody>
-                    </table>
+              </tbody>
+            </table>
 
-                    <!-- Button to export emails -->
-                    <button class="btn btn-primary" id="exportBtn">Export</button>
+            <!-- Button to export emails -->
+            <button class="btn btn-primary" id="exportBtn">Export</button>
 
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
   <div class="container py-5">
-    <header class="text-center text-white wow fadeInUp" data-wow-delay="1s">
-        <h1 class="display-4">Osoby do skontaktowania:</h1>
+    <header class="text-center wow fadeInUp" data-wow-delay="1s">
+      <h1 class="display-4 ">Osoby do skontaktowania:</h1>
     </header>
 
     <div class="row py-5">
-        <div class="col-lg-9 mx-auto">
-            <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
-                <div class="card-body p-5">
-                    <h4 class="mb-4 wow fadeInUp" data-wow-delay=".4s">Lista kontaktów:</h4>
-                    <!-- Formularz z listą osób -->
-                    <form id="contactForm" method="post" action="php/delete_meetings.php">
-                        <table class="table wow fadeInUp" data-wow-delay=".6s">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID Klienta</th>
-                                    <th scope="col">Imię</th>
-                                    <th scope="col">Nazwisko</th>
-                                    <th scope="col">Mail</th>
-                                    <th scope="col">Data spotkania</th>
-                                    <th scope="col">Checkbox</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
+      <div class="col-lg-9 mx-auto">
+        <div class="card shadow mb-4 wow fadeInUp" data-wow-delay=".2s">
+          <div class="card-body p-5">
+            <h4 class="mb-4 wow fadeInUp text-black" data-wow-delay=".4s">Lista kontaktów:</h4>
+            <!-- Formularz z listą osób -->
+            <form id="contactForm" method="post" action="php/delete_meetings.php">
+              <table class="table wow fadeInUp" data-wow-delay=".6s">
+                <thead>
+                  <tr>
+                    <th scope="col">ID Klienta</th>
+                    <th scope="col">Imię</th>
+                    <th scope="col">Nazwisko</th>
+                    <th scope="col">Mail</th>
+                    <th scope="col">Data spotkania</th>
+                    <th scope="col">Checkbox</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
                                 // Wyświetlanie osób w formularzu
                                 foreach ($firmData as $index => $firm) {
                                     echo '<tr>';
@@ -142,20 +142,20 @@
                                     echo '</tr>';
                                 }
                                 ?>
-                            </tbody>
-                        </table>
-                        <!-- Button to delete selected meetings -->
-                        <button type="submit" class="btn btn-danger" id="deleteMeetingsBtn">Usuń zaznaczone spotkania</button>
-                    </form>
-                </div>
-            </div>
+                </tbody>
+              </table>
+              <!-- Button to delete selected meetings -->
+              <button type="submit" class="btn btn-danger" id="deleteMeetingsBtn">Usuń zaznaczone spotkania</button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-				<form action="php/logout.php" method="post">
-                    <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
-                </form>
+  <form action="php/logout.php" method="post">
+    <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
+  </form>
 
   <footer class="text-white text-center text-lg-start bg-purple">
     <!-- Grid container -->
@@ -168,12 +168,11 @@
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
           <p>
-            Tutaj Będzie NIP:
+            NIP: 640 170 31 31
           </p>
 
           <p>
-            Firma wpisana do Rejestru Przedsiębiorców KRS
-            pod numerem:
+            REGON: 243102614
           </p>
 
         </div>
@@ -184,16 +183,13 @@
 
           <ul class="fa-ul" style="margin-left: 1.65em;">
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">ul. Ostatnia 3, 41-909 Bytom</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">hometom@tlen.pl</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">601 882 239</span>
             </li>
           </ul>
         </div>

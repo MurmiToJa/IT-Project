@@ -127,12 +127,11 @@
         <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
         <p>
-          Tutaj Będzie NIP:
+          NIP: 640 170 31 31
         </p>
 
         <p>
-          Firma wpisana do Rejestru Przedsiębiorców KRS
-          pod numerem:
+          REGON: 243102614
         </p>
 
       </div>
@@ -143,16 +142,13 @@
 
         <ul class="fa-ul" style="margin-left: 1.65em;">
           <li class="mb-3">
-            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">ul. Ostatnia 3, 41-909 Bytom</span>
           </li>
           <li class="mb-3">
-            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">hometom@tlen.pl</span>
           </li>
           <li class="mb-3">
-            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-          </li>
-          <li class="mb-3">
-            <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">601 882 239</span>
           </li>
         </ul>
       </div>

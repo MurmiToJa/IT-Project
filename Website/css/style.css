@@ -14,6 +14,11 @@
 
 /*** Spinner End ***/
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 
 .back-to-top {
@@ -262,4 +267,10 @@
 
 .newsletter {
   color: var(--bs-gold);
+}
+
+
+
+h4.text-black {
+  color: black !important;
 }

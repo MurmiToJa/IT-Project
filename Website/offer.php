@@ -76,7 +76,7 @@
                       <div class="ico fa fa-magic highlight"></div>
                       <div class="text-block">
                         <div class="name">Obsługi Doradcze</div>
-                        <div class="info">Krótki opis here</div>
+
                         <div class="text">Bieżące doradztwo podatkowe, planowanie podatkowe, przygotowywanie deklaracji podatkowych, reprezentowanie firmy przed Urzędem Skarbowym, Izbą Skarbową, Naczelnym Sądem Administracyjnym. </div>
                       </div>
                     </div>
@@ -86,7 +86,7 @@
                       <div class="ico fa fa-code highlight"></div>
                       <div class="text-block">
                         <div class="name">Obsługa Księgowej</div>
-                        <div class="info">Krótki opis here</div>
+
                         <div class="text">Prowadzenie rachunkowości Państwa firmy, przygotowywanie sprawozdań dla potrzeb rachunkowości finansowej i zarządczej, przygotowywanie analiz i raportów dla zarządu i udziałowców, również wg Międzynarodowych Standardów Rachunkowości. </div>
                       </div>
                     </div>
@@ -96,7 +96,7 @@
                       <div class="ico fa fa-code highlight"></div>
                       <div class="text-block">
                         <div class="name">Obsługi Kadrowo-płacowe</div>
-                        <div class="info">Krótki opis here</div>
+
                         <div class="text">Prowadzenie rozliczeń z pracownikami, rozliczeń z ZUS, osobne prowadzenie płac zarządu. </div>
                       </div>
                     </div>
@@ -106,7 +106,7 @@
                       <div class="ico fa fa-bullhorn highlight"></div>
                       <div class="text-block">
                         <div class="name">Obsługa Gospodarcza</div>
-                        <div class="info">Krótki opis here</div>
+
                         <div class="text">Zakładanie, przekształcanie oraz wycena przedsiębiorstw. </div>
                       </div>
                     </div>
@@ -116,8 +116,8 @@
                       <div class="ico fa fa-eye highlight"></div>
                       <div class="text-block">
                         <div class="name">Audyt Podatkowy Spółki</div>
-                        <div class="info">Krótki opis here</div>
-                        <div class="text">Krótki opis here </div>
+
+                        <div class="text">Usprawnimy kwestie podatkowe w twojej spółce, abyś miał wolną głowę od zawiłości podatkowych i pełen portfel z ich optymalizacji. </div>
                       </div>
                     </div>
                   </div>
@@ -126,8 +126,8 @@
                       <div class="ico fa fa-umbrella highlight"></div>
                       <div class="text-block">
                         <div class="name">Doradztwo W Zakresie Zarządzania</div>
-                        <div class="info">Krótki opis here</div>
-                        <div class="text">Krótki opis here </div>
+
+                        <div class="text">Pomożemy ci rozpocząć twój pierwszy biznes. Wiemy co możesz zrobić aby twoja firma wystartowała i aby każdy potrzebny dokument znalazł się w urzędzie na czas. </div>
                       </div>
                     </div>
 
@@ -154,12 +154,11 @@
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
           <p>
-            Tutaj Będzie NIP:
+            NIP: 640 170 31 31
           </p>
 
           <p>
-            Firma wpisana do Rejestru Przedsiębiorców KRS
-            pod numerem:
+            REGON: 243102614
           </p>
 
         </div>
@@ -170,16 +169,13 @@
 
           <ul class="fa-ul" style="margin-left: 1.65em;">
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">ul. Ostatnia 3, 41-909 Bytom</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">hometom@tlen.pl</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">601 882 239</span>
             </li>
           </ul>
         </div>

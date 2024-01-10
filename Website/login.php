@@ -67,6 +67,15 @@
         <form class="register-form" action="login.php" method="post">
           <h2 class="text-center purple-text">Logowanie</h2>
           <hr>
+          <?php
+                if (isset($_SESSION['error'])) {
+    echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>';
+    unset($_SESSION['error']); // Usunięcie komunikatu o błędzie po wyświetleniu
+}
+
+
+
+                ?>
           <div class="form-group">
             <label for="email">Email</label>
             <input name="email" type="email" class="form-control" placeholder="Wprowadź Email" autocomplete="off">
@@ -90,43 +99,36 @@
 
 
 
-  <footer class="text-white text-center text-lg-start bg-purple">
-    <!-- Grid container -->
+
+
+
+  <footer class="text-white text-center text-lg-start bg-purple mt-auto">
     <div class="container p-4">
-      <!--Grid row-->
       <div class="row mt-4">
 
-        <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
           <p>
-            Tutaj Będzie NIP:
+            NIP: 640 170 31 31
           </p>
 
           <p>
-            Firma wpisana do Rejestru Przedsiębiorców KRS
-            pod numerem:
+            REGON: 243102614
           </p>
 
         </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
 
           <ul class="fa-ul" style="margin-left: 1.65em;">
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">ul. Ostatnia 3, 41-909 Bytom</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">hometom@tlen.pl</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">601 882 239</span>
             </li>
           </ul>
         </div>
@@ -153,11 +155,20 @@
             </tbody>
           </table>
         </div>
-        <!--Grid column-->
+
+
       </div>
-      <!--Grid row-->
     </div>
   </footer>
+
+
+
+
+
+
+
+
+
   <!-- Grid container -->
   <!-- Back to Top -->
   <a href="#" class="btn btn-primary rounded-circle border-3 back-to-top"><i class="fa fa-arrow-up"></i></a>
@@ -175,12 +186,3 @@
 </body>
 
 </html>
-<?php
-                if (isset($_SESSION['error'])) {
-    echo '<div class="alert alert-danger">' . $_SESSION['error'] . '</div>';
-    unset($_SESSION['error']); // Usunięcie komunikatu o błędzie po wyświetleniu
-}
-
-
-
-                ?>

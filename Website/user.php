@@ -60,43 +60,43 @@
   <!-- Navbar Stop -->
 
   <!-- Form Section Start -->
-<div class="container mt-5">
+  <div class="container mt-5">
     <div class="container padded animated slideInLeft">
-        <div class="row">
-            <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
-                <form class="register-form" action="user.php" method="post">
-                    <h2 class="text-center purple-text">Formularz zgłoszeniowy</h2>
-                    <hr>
-                    <div class="form-group">
-                        <label for="imie">Imię</label>
-                        <input name="imie" type="text" class="form-control" placeholder="Imię" value="<?php echo isset($imie) ? htmlspecialchars($imie) : ''; ?>">
-                        <span class="hint alert-success">Wprowadź swoje Imię</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="nazwisko">Nazwisko</label>
-                        <input name="nazwisko" type="text" class="form-control" placeholder="Nazwisko" value="<?php echo isset($nazwisko) ? htmlspecialchars($nazwisko) : ''; ?>">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefon">Numer telefonu</label>
-                        <input name="telefon" type="text" class="form-control" placeholder="999 xxx xxx" maxlength="9" value="<?php echo isset($telefon) ? htmlspecialchars($telefon) : ''; ?>">
-                        <span class="hint alert-success">Wpisz numer telefonu (maksymalnie 9 cyfr).</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactTime">Data spotkania</label>
-                        <input type="datetime-local" class="form-control" name="contactTime" id="contactTime" required value="<?php echo isset($godziny_spotkania) ? htmlspecialchars($godziny_spotkania) : ''; ?>">
-                    </div>
-                    <hr>
-                    <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Wprowadź</button>
-					
-                </form>
-				<!-- Przycisk do wylogowania -->
-                <form action="logout.php" method="post">
-                    <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
-                </form>
+      <div class="row">
+        <div class="col-sm-8 col-md-6 offset-sm-2 offset-md-3">
+          <form class="register-form" action="user.php" method="post">
+            <h2 class="text-center purple-text">Formularz zgłoszeniowy</h2>
+            <hr>
+            <div class="form-group">
+              <label for="imie">Imię</label>
+              <input name="imie" type="text" class="form-control" placeholder="Imię" value="<?php echo isset($imie) ? htmlspecialchars($imie) : ''; ?>">
+              <span class="hint alert-success">Wprowadź swoje Imię</span>
             </div>
+            <div class="form-group">
+              <label for="nazwisko">Nazwisko</label>
+              <input name="nazwisko" type="text" class="form-control" placeholder="Nazwisko" value="<?php echo isset($nazwisko) ? htmlspecialchars($nazwisko) : ''; ?>">
+            </div>
+            <div class="form-group">
+              <label for="telefon">Numer telefonu</label>
+              <input name="telefon" type="text" class="form-control" placeholder="999 xxx xxx" maxlength="9" value="<?php echo isset($telefon) ? htmlspecialchars($telefon) : ''; ?>">
+              <span class="hint alert-success">Wpisz numer telefonu (maksymalnie 9 cyfr).</span>
+            </div>
+            <div class="form-group">
+              <label for="contactTime">Data spotkania</label>
+              <input type="datetime-local" class="form-control" name="contactTime" id="contactTime" required value="<?php echo isset($godziny_spotkania) ? htmlspecialchars($godziny_spotkania) : ''; ?>">
+            </div>
+            <hr>
+            <button type="submit" name="reg_user" class="btn px-5 py-3 btn btn-primary border-2 rounded-pill float-right">Wprowadź</button>
+
+          </form>
+          <!-- Przycisk do wylogowania -->
+          <form action="logout.php" method="post">
+            <button type="submit" name="logout_user" class="btn px-5 py-3 btn btn-danger border-2 rounded-pill mt-3">Wyloguj</button>
+          </form>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
   <!-- Form Section End -->
 
@@ -119,12 +119,11 @@
           <h5 class="text-uppercase mb-4" style="color:White">O FinTax</h5>
 
           <p>
-            Tutaj Będzie NIP:
+            NIP: 640 170 31 31
           </p>
 
           <p>
-            Firma wpisana do Rejestru Przedsiębiorców KRS
-            pod numerem:
+            REGON: 243102614
           </p>
 
         </div>
@@ -135,16 +134,13 @@
 
           <ul class="fa-ul" style="margin-left: 1.65em;">
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Adres Biura</span>
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">ul. Ostatnia 3, 41-909 Bytom</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mail@Do.Biura</span>
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">hometom@tlen.pl</span>
             </li>
             <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Numer Do Biura</span>
-            </li>
-            <li class="mb-3">
-              <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">Fax do Biura</span>
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">601 882 239</span>
             </li>
           </ul>
         </div>

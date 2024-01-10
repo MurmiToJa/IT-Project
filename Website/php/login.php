@@ -47,15 +47,18 @@ if (isset($_POST['login_user'])) {
 				array_push($errors, "Nieprawidłowe hasło");
 			}
 		} else {
-			array_push($errors, "Użytkownik o podanym emailu nie istnieje");
+			array_push($errors, "Użytkownik o podanym emailu nie istnieje.");
 		}
 
     }
+  else{
+    // Przypisanie komunikatów do sesji
+    $_SESSION['error'] = implode("<br>", $errors);
+    $_SESSION['success'] = $success;
+
+  }
 }
 
-// Przypisanie komunikatów do sesji
-$_SESSION['error'] = implode("<br>", $errors);
-$_SESSION['success'] = $success;
 
 
 ?>
