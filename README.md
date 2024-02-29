@@ -25,6 +25,6 @@ Our project's primary goal is to gain a deep understanding of modern Internet te
 - [x] Week 4 - CSS - Defining the page’s interface.
 - [x] Week 5 - CSS and Grid \Flexbox \Bootstrap - Fine-tuning the page layout -  creating website responsiveness.
 - [x] Week 6 - JavaScript - Creating basic scripts.
-- [ ] Week 7 - JavaScript - Developing scripts for website interactions.
-- [ ] Week 8 - PHP - Implementing scripts connecting to the database, enabling login, and adding Cookies and Newsletter.
-- [ ] Week 9 - Implementing databases to allow user login.
+- [x] Week 7 - JavaScript - Developing scripts for website interactions.
+- [x] Week 8 - PHP - Implementing scripts connecting to the database, enabling login, and adding Cookies and Newsletter.
+- [x] Week 9 - Implementing databases to allow user login.
